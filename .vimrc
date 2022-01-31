@@ -59,3 +59,13 @@ imap jk <Esc>
 "
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+
+set clipboard=unnamedplus " Copy from vim to clipboard"
+
+"paste to vim from clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+

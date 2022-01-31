@@ -1,0 +1,2 @@
+## Minimal vim + tmux configuration
+
