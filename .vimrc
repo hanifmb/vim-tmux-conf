@@ -1,3 +1,7 @@
+" ----------------
+" --   Vundle   --
+" ----------------
+
 set nocompatible              " be iMproved, required
 filetype off                  " detecting file type which triggers Filetype event for syntax highlighting etc.
 
@@ -11,13 +15,18 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
+
+" ----------------
+" --    Term    --
+" ----------------
+
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -32,13 +41,13 @@ filetype plugin indent on    " required
     set termguicolors
   endif
 
-
 syntax on
 colorscheme onedark
 
-"---"
+" ----------------
+" -- Basic Vim  --
+" ----------------
 
-filetype plugin on
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set nowrap
@@ -55,17 +64,16 @@ set si "Smart indent
 set mouse=a 
 imap jk <Esc>
 
-"---"
-"
+" Changing cursor during input mode
+
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+" Copy from vim to clipboard"
+set clipboard=unnamedplus 
 
-set clipboard=unnamedplus " Copy from vim to clipboard"
-
-"paste to vim from clipboard
+" Paste to vim from clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
-
