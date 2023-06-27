@@ -43,3 +43,5 @@ fi
 ## [Screenshot]
 For reference.
 ![Screenshot from 2023-03-25 08-53-26](https://user-images.githubusercontent.com/40484370/227704974-912e5eb2-4e91-4afe-a41a-1f3a958059e0.png)
+Change background color to `#282c34`
+![change-bg-color](https://github.com/hanifmb/vim-tmux-conf/assets/40484370/3d704c60-34f8-4a4d-bc92-79e6a66d5992)
