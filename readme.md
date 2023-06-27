@@ -8,7 +8,14 @@ Installing vundle:
 ```Bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
-Copy .vimrc to home then proceeds with `:PuginInstall` on vim
+
+Clone this repo and copy .vimrc and .tmux.conf to home:
+```Bash
+git clone https://github.com/hanifmb/vim-tmux-conf.git
+cp vim-tmux-conf/.tmux.conf vim-tmux-conf/.vimrc .
+```
+
+proceeds with `:PuginInstall` on vim.
 
 ## tmux
 Installing tmux:
@@ -19,7 +26,7 @@ Installing tmux plugin manager:
 ```Bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-Copy `.tmux.conf` to home and reload tmux env.
+Verity that `.tmux.conf` is at home and reload tmux env.
 ```Bash
 tmux source ~/.tmux.conf
 ```
