@@ -15,7 +15,7 @@ git clone https://github.com/hanifmb/vim-tmux-conf.git
 cp vim-tmux-conf/.tmux.conf vim-tmux-conf/.vimrc .
 ```
 
-proceeds with `:PuginInstall` on vim.
+proceeds with `:PluginInstall` on vim.
 
 ## tmux
 Installing tmux:
@@ -28,9 +28,22 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 Verity that `.tmux.conf` is at home and reload tmux env.
 ```Bash
+tmux
 tmux source ~/.tmux.conf
 ```
 Open tmux and hit `prefix` + <kbd>I</kbd> to install tmux plugin. `prefix` is by default <kbd>Ctrl</kbd> + <kbd>a</kbd>; note that <kbd>I</kbd> is capital.
+
+At this point, tmux might look weird due to missing symbol. Install Powerline fonts:
+
+```Bash
+sudo apt-get install fonts-powerline
+```
+
+## terminal
+Change the terminal background color to match One Dark theme (Preferences > Colors > Use color from system theme > Default color > Background):
+```
+#282C34
+```
 
 ### Tmux on terminal startup: add to .bashrc
 
