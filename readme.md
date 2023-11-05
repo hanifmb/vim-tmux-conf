@@ -17,7 +17,7 @@ cp vim-tmux-conf/.tmux.conf vim-tmux-conf/.vimrc .
 
 proceeds with `:PluginInstall` on vim.
 
-## tmux
+## Tmux
 Installing tmux:
 ```
 sudo apt-get install tmux
@@ -39,11 +39,9 @@ At this point, tmux might look weird due to missing symbol. Install Powerline fo
 sudo apt-get install fonts-powerline
 ```
 
-## terminal
-Change the terminal background color to match One Dark theme (Preferences > Colors > Use color from system theme > Default color > Background):
-```
-#282C34
-```
+## Terminal
+Change background color to `#282c34`
+![change-bg-color](https://github.com/hanifmb/vim-tmux-conf/assets/40484370/3d704c60-34f8-4a4d-bc92-79e6a66d5992)
 
 ### Tmux on terminal startup: add to .bashrc
 
@@ -56,5 +54,3 @@ fi
 ## [Screenshot]
 For reference.
 ![Screenshot from 2023-03-25 08-53-26](https://user-images.githubusercontent.com/40484370/227704974-912e5eb2-4e91-4afe-a41a-1f3a958059e0.png)
-Change background color to `#282c34`
-![change-bg-color](https://github.com/hanifmb/vim-tmux-conf/assets/40484370/3d704c60-34f8-4a4d-bc92-79e6a66d5992)
