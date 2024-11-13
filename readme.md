@@ -1,7 +1,31 @@
-## GVim
-For enabled clipboard:
+## Installing dependencies
+Installing NVM and Node for coc.nvim.
 ```Bash
-sudo apt install vim-gtk3
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source .bashrc
+nvm install 20
+node --version
+```
+
+Dependencies for Vim.
+```Bash
+sudo apt install -y \
+git \
+make \
+clang \
+libtool-bin \
+npm
+```
+
+## Vim
+Building Vim with "huge" features which include GUI, clipboard, and Python3:
+```Bash
+git clone https://github.com/vim/vim.git
+cd vim
+# make distclean
+./configure --with-features=huge --enable-python3interp=yes 
+make 
+sudo make install
 ```
 
 Installing vundle:
@@ -16,6 +40,22 @@ cp vim-tmux-conf/.tmux.conf vim-tmux-conf/.vimrc .
 ```
 
 proceeds with `:PluginInstall` on vim.
+
+### coc-clangd and coc.nvim
+Now that coc.nvim is installed through Vundle. coc.nvim dependencies can be installed by: 
+```Bash
+cd $HOME/.vim/bundle/coc.nvim
+npm install
+```
+Set up clangd in Vim with `:CocInstall coc-clangd coc-json` followed by `:CocCommand clangd.install`.
+Configure coc.nvim with `:CocConfig`.
+```Json
+{
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
+  "clangd.compilationDatabaseCandidates": ["~/ws/build"],
+  "clangd.fallbackFlags": [ "-std=c++20" ]
+}
+```
 
 ## Tmux
 Installing tmux:
