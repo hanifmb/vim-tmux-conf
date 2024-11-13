@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-commentary'
+Plugin 'neoclide/coc.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,24 +49,22 @@ colorscheme onedark
 " -- Basic Vim  --
 " ----------------
 
-set encoding=utf-8  " The encoding displayed.
-set fileencoding=utf-8  " The encoding written to file.
+set encoding=utf-8                  " The encoding displayed.
+set fileencoding=utf-8              " The encoding written to file.
 set nowrap
 set number
-set relativenumber
 set backspace=indent,eol,start
 set hlsearch
-set expandtab
+set expandtab                       " Use spaces instead of tabs
 set smarttab
-set shiftwidth=4
-set tabstop=4
-set ai "Auto indent
-set si "Smart indent
+set shiftwidth=2                    " Number of spaces to use for each step of (auto)indent
+set tabstop=2                       " Number of spaces that a <Tab> in the file counts for
+set ai                              " Auto indent
+set si                              " Smart indent
 set mouse=a 
 imap jk <Esc>
 
 " Changing cursor during input mode
-
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
