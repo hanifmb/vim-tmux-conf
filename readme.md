@@ -62,6 +62,8 @@ Configure coc.nvim with `:CocConfig`.
 ### coc-format
 Clangd uses coc-format on the backend, hence coc-clangd is all needed at the frontend for formatting. As shown above, set `coc.preferences.formatOnSave` to `true`.
 
+**Note**:
+coc-format looks for `.clang-format` file for the formatting style by traversing down the directory tree. Place the `.clang-format` file in the root directory (e.g. `/.clang-format`) or home (e.g `~/.clang-format`) to set up the global style.
 
 ## Tmux
 Installing tmux:
