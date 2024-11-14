@@ -52,10 +52,16 @@ Configure coc.nvim with `:CocConfig`.
 ```Json
 {
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
-  "clangd.compilationDatabaseCandidates": ["~/ws/build"],
-  "clangd.fallbackFlags": [ "-std=c++20" ]
+  "clangd.compilationDatabaseCandidates": [".", "~/ws/build"],
+  "clangd.fallbackFlags": ["-std=c++20"],
+  "coc.preferences.formatOnSave": true,
+  "inlayHint.enable": false
 }
 ```
+
+### coc-format
+Clangd uses coc-format on the backend, hence coc-clangd is all needed at the frontend for formatting. As shown above, set `coc.preferences.formatOnSave` to `true`.
+
 
 ## Tmux
 Installing tmux:
