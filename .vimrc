@@ -49,6 +49,8 @@ colorscheme onedark
 " -- Basic Vim  --
 " ----------------
 
+" Always show the signcolumn, otherwise it would shift the text each time
+set signcolumn=yes
 set encoding=utf-8                  " The encoding displayed.
 set fileencoding=utf-8              " The encoding written to file.
 set nowrap
@@ -76,3 +78,4 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+
