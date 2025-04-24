@@ -87,6 +87,8 @@ At this point, tmux might look weird due to missing symbol. Install Powerline fo
 sudo apt-get install fonts-powerline
 ```
 
+make sure that `/etc/default/locale` is set to en_US. Otherwise, symbols won't work. Not for the UAE PC :)
+
 ## Terminal
 Change background color to `#282c34`
 ![change-bg-color](https://github.com/hanifmb/vim-tmux-conf/assets/40484370/3d704c60-34f8-4a4d-bc92-79e6a66d5992)
